@@ -1,0 +1,6 @@
+Variable,Mean,Std_Dev,Minimum,Maximum,Missing_Values,Screening_Status,Reason
+OBESITY_CrudePrev,37.889,6.792,25.5,57.1,0,Baseline,Included in the professor's original health indicators.
+DIABETES_CrudePrev,11.067,4.669,3.7,32.3,0,Baseline,Included in the professor's original health indicators.
+BPHIGH_CrudePrev,33.575,7.248,17.5,59.8,0,Baseline,Included in the professor's original health indicators.
+LPA_CrudePrev,25.067,9.154,11.7,54.8,0,Alternative,Test as an alternative; strongly correlated with other indicators.
+GHLTH_CrudePrev,17.153,7.793,6.6,40.8,0,Alternative,Test as an alternative; strongly correlated with other indicators.

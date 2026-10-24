@@ -1,0 +1,35 @@
+
+SRAM GEOGRAPHY AUDIT
+====================
+
+Input SRAM worksheet: GeneralTractCharacteristic Data
+
+Existing project rows: 516
+Unique existing project tract IDs: 516
+
+SRAM rows in selected counties: 607
+Unique SRAM tract IDs: 607
+
+Exact tract ID matches: 430
+SRAM IDs not in existing project: 177
+Existing project IDs not in SRAM: 86
+
+Missing or invalid SRAM IDs in selected counties:
+0
+
+Duplicate SRAM tract ID rows:
+0
+
+Duplicate existing project GEOID rows:
+0
+
+Number of state-county pairs in existing study area:
+14
+
+Important limitations:
+1. Exact ID matches do not prove that tract boundaries are identical.
+2. The existing project uses 2019 tract geography, while SRAM
+   uses 2020 tract geography.
+3. This is an exact-ID comparison, not a geographic crosswalk.
+4. Do not merge the datasets until geographic compatibility
+   has been evaluated.

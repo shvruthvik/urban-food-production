@@ -1,0 +1,25 @@
+HEALTH VARIABLE SCREENING REPORT
+Urban Food Production Project
+
+Dataset: 516 Kansas City metro census tracts
+Health variables reviewed: 5
+Missing values: 0 for all five variables
+
+BASELINE VARIABLES
+- Obesity
+- Diabetes
+- High blood pressure
+
+ALTERNATIVE VARIABLES
+- Physical inactivity
+- Fair or poor general health
+
+STRONGEST CORRELATIONS
+- LPA_CrudePrev and GHLTH_CrudePrev: 0.956
+- DIABETES_CrudePrev and BPHIGH_CrudePrev: 0.949
+- DIABETES_CrudePrev and GHLTH_CrudePrev: 0.940
+- DIABETES_CrudePrev and LPA_CrudePrev: 0.925
+- OBESITY_CrudePrev and GHLTH_CrudePrev: 0.918
+
+PRELIMINARY CONCLUSION
+The five health indicators show substantial overlap. The professor's three indicators are retained as the baseline for further evaluation. Physical inactivity and general health remain alternatives for testing. These results alone do not establish which variables are best for the final model. Final selection requires a clear rationale for how community health relates to urban food production priorities.

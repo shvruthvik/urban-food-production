@@ -1,0 +1,39 @@
+
+USDA 2019 Large Retailer Access Map (LRAM)
+
+Source:
+FoodAccessResearchAtlasData2019.xlsx
+Worksheet: Food Access Research Atlas
+
+Merge key:
+Project dataset: TractFIPS
+USDA dataset: CensusTract
+
+The IDs were standardized as 11-character text values.
+The USDA records were filtered to the project's tract IDs.
+The selected fields were merged using a one-to-one left join.
+
+Candidate indicators:
+- LA1and10
+- LAhalfand10
+- LILATracts_1And10
+- lapop1share
+- LAPOP1_10
+- LALOWI1_10
+- lalowi1share
+
+Important interpretation:
+LRAM measures geographic access to large food retailers,
+such as supermarkets, supercenters, and large grocery stores.
+It is not a direct measure of individual food insecurity.
+It is not the same measure as SNAP-authorized retailer access.
+
+The 2019 LRAM is documented by USDA as using 2010 census
+tract geography. Matching IDs establishes tabular join
+compatibility, but does not by itself prove that the project's
+actual boundary polygons are identical.
+
+Missing values were kept as missing, not changed to zero.
+
+The indicators remain candidates until the final model
+criteria are reviewed for overlap and double-counting.

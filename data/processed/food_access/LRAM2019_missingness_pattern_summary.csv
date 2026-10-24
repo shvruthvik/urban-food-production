@@ -1,0 +1,4 @@
+Missingness_pattern,Tract_count,Percent_of_all_tracts
+Both missing,101,19.57364341085271
+Count only missing,61,11.821705426356589
+Neither missing,354,68.6046511627907

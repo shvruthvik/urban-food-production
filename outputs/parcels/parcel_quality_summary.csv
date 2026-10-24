@@ -1,0 +1,11 @@
+Check,Result
+Total parcel records,269834
+Unique KIVAPIN values,265924
+Missing KIVAPIN,3873
+Duplicate KIVAPIN rows,3909
+Missing geometry,1
+Empty geometry,0
+Invalid geometry,78
+Missing land-use code,69150
+Missing improvement value,61209
+Zero improvement value,31996

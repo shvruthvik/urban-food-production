@@ -1,0 +1,24 @@
+
+SRAM FOOD-ACCESS SCREENING
+==========================
+
+SRAM rows in study counties: 607
+Unique tract IDs: 607
+
+Candidate indicator summary:
+                 Variable  Tracts_With_Value  Missing_Values  Minimum  Maximum      Mean  Median  Tracts_Flagged_1  Tracts_Flagged_0
+         DD_SRAM_LA1and10                603               4      0.0      1.0  0.434494    0.00             262.0             341.0
+DD_SRAM_LILATracts_1And10                607               0      0.0      1.0  0.090610    0.00              55.0             552.0
+      DD_SRAM_lapop1share                603               4      0.0    100.0 32.159934   19.52               NaN               NaN
+   DD_SRAM_lapophalfshare                603               4      0.0    100.0 64.318574   73.52               NaN               NaN
+  DD_SRAM_lahunvhalfshare                599               8      0.0    450.0  3.782204    1.94               NaN               NaN
+
+Important limitations:
+1. SRAM uses 2020 tract geography.
+2. Existing project boundaries use 2019 tract geography.
+3. These results are descriptive screening results, not suitability scores.
+4. SNAP-authorized retailers are not necessarily all supermarkets
+   or full-service grocery stores.
+5. Population shares and tract flags measure different things.
+6. Food access is not the same as public transit access.
+7. Review the official lookup definitions before final variable selection.

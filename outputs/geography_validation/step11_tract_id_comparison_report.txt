@@ -1,0 +1,23 @@
+2020 CENSUS TRACT GEOGRAPHY COMPARISON
+=============================================
+2020 boundary tracts: 607
+Existing project tracts: 516
+USDA SRAM tract IDs: 607
+
+2020 boundaries vs existing project:
+Matching IDs: 430
+Boundary IDs not in project: 177
+Project IDs not in boundaries: 86
+
+2020 boundaries vs USDA SRAM:
+Matching IDs: 607
+Boundary IDs not in SRAM: 0
+SRAM IDs not in boundaries: 0
+
+Existing project vs USDA SRAM:
+Matching IDs: 430
+Project IDs not in SRAM: 86
+SRAM IDs not in project: 177
+
+Important: matching GEOIDs do not by themselves prove
+that two datasets use identical geographic boundaries.

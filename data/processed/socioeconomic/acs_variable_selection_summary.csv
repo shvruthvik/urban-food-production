@@ -1,0 +1,15 @@
+Variable,Dimension,Decision,Reason,Check
+Poverty percentage,Socioeconomic need,Keep for initial model,Direct indicator of economic hardship,Compare with SNAP and income
+No-vehicle households percentage,Transportation access,Keep for initial model,May indicate transportation barriers,Compare with poverty and SNAP
+SNAP households percentage,Economic and food assistance,Compare with poverty,Indicates participation in food assistance,Strong correlation with poverty
+Median household income,Socioeconomic context,Compare with poverty,Measures household economic conditions,Strong correlation with poverty and home value
+Obesity prevalence,Community health,Keep for initial review,Health indicator identified in project context,"Verify source, year, and interpretation"
+Diabetes prevalence,Community health,Keep for initial review,Health indicator identified in project context,"Verify source, year, and interpretation"
+High blood pressure prevalence,Community health,Keep for initial review,Health indicator identified in project context,"Verify source, year, and interpretation"
+Age 65+ percentage,Demographic context,Retain for review,May help describe community needs,Justify its role in site prioritization
+Bachelor's degree or higher percentage,Education,Descriptive for now,May characterize neighborhood context,Strong correlation with income and home value
+Median rent,Housing context,Descriptive for now,May characterize local housing conditions,Correlated with income
+Median home value,Housing context,Descriptive for now,May characterize local housing conditions,Strong correlation with income and education
+Foreign-born percentage,Demographic context,Descriptive for now,May support contextual analysis,Do not interpret as a disadvantage by itself
+Hispanic/Latino percentage,Demographic context,Descriptive for now,May support contextual analysis,Do not interpret as a disadvantage by itself
+Households with children percentage,Demographic context,Retain for review,May be relevant to family-oriented planning,Define the intended planning rationale

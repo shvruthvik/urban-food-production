@@ -1,0 +1,6 @@
+Variable,Tracts_With_Value,Missing_Values,Minimum,Maximum,Mean,Median,Tracts_Flagged_1,Tracts_Flagged_0
+DD_SRAM_LA1and10,603,4,0.0,1.0,0.43449419568822556,0.0,262.0,341.0
+DD_SRAM_LILATracts_1And10,607,0,0.0,1.0,0.09060955518945635,0.0,55.0,552.0
+DD_SRAM_lapop1share,603,4,0.0,100.0,32.159933665008296,19.52,,
+DD_SRAM_lapophalfshare,603,4,0.0,100.0,64.31857379767828,73.52,,
+DD_SRAM_lahunvhalfshare,599,8,0.0,450.0,3.78220367278798,1.94,,

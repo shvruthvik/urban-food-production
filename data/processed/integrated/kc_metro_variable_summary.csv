@@ -1,0 +1,7 @@
+Variable,Category,Description,Source,Preliminary role,Valid tracts,Missing values,Mean,Minimum,Maximum
+OBESITY_CrudePrev,Community health,Estimated adult obesity prevalence,"CDC PLACES, 2023 release",Keep for initial review,516,0,37.89,25.5,57.1
+DIABETES_CrudePrev,Community health,Estimated adult diabetes prevalence,"CDC PLACES, 2023 release",Keep for initial review,516,0,11.07,3.7,32.3
+BPHIGH_CrudePrev,Community health,Estimated adult high blood pressure prevalence,"CDC PLACES, 2023 release",Keep for initial review,516,0,33.58,17.5,59.8
+Poverty_Percent,Socioeconomic need,Percentage of people below the poverty level,ACS 2019 5-year estimates,Keep for initial review,515,1,12.68,0.0,63.42
+No_Vehicle_Households_Percent,Transportation access,Percentage of households without a vehicle,ACS 2019 5-year estimates,Keep for initial review,515,1,7.22,0.0,54.01
+SNAP_Households_Percent,Economic and food assistance,Percentage of households receiving SNAP,ACS 2019 5-year estimates,Compare with poverty,515,1,9.64,0.0,64.36
