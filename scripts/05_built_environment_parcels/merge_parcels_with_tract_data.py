@@ -2,8 +2,8 @@
 from pathlib import Path
 import pandas as pd
 
-project_folder = Path.home() / "Downloads" / "Urban food Production"
-data_folder = project_folder / "data"
+project_folder = Path(__file__).resolve().parents[2]
+data_folder = project_folder / "data" / "processed" / "integrated"
 parcel_folder = project_folder / "outputs" / "parcels"
 
 # Load the existing tract-level dataset and parcel counts
@@ -59,7 +59,7 @@ combined[count_columns] = combined[count_columns].fillna(0)
 combined = combined.drop(columns=["GEOID"])
 
 output_file = (
-    parcel_folder / "kc_metro_health_socioeconomic_parcel_counts.csv"
+    data_folder / "kc_metro_health_socioeconomic_parcel_counts.csv"
 )
 combined.to_csv(output_file, index=False)
 

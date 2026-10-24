@@ -5,7 +5,7 @@ import geopandas as gpd
 import pyogrio
 
 # Project and source file locations
-project_folder = Path.home() / "Downloads" / "Urban food Production"
+project_folder = Path(__file__).resolve().parents[2]
 zip_file = Path.home() / "Downloads" / "Cadastre.gdb.zip"
 output_folder = project_folder / "outputs" / "parcels"
 

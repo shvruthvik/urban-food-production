@@ -3,9 +3,10 @@ from pathlib import Path
 
 # pd.set_option("display.max_columns", None)
 
-data_folder = Path(r"C:\Users\shvru\Downloads\Urban food Production\data")
+project_folder = Path(__file__).resolve().parents[2]
+data_folder = project_folder / "data"
 
-data_files = list(data_folder.glob("*.csv"))
+data_files = list(data_folder.rglob("*.csv"))
 
 for file in data_files:
     print(file.name)

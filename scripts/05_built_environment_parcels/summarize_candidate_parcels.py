@@ -3,7 +3,7 @@ from pathlib import Path
 import geopandas as gpd
 import pandas as pd
 
-project_folder = Path.home() / "Downloads" / "Urban food Production"
+project_folder = Path(__file__).resolve().parents[2]
 zip_file = Path.home() / "Downloads" / "Cadastre.gdb.zip"
 output_folder = project_folder / "outputs" / "parcels"
 output_folder.mkdir(parents=True, exist_ok=True)

@@ -4,9 +4,9 @@ import geopandas as gpd
 import pandas as pd
 
 # Project and file locations
-project_folder = Path.home() / "Downloads" / "Urban food Production"
+project_folder = Path(__file__).resolve().parents[2]
 zip_file = Path.home() / "Downloads" / "Cadastre.gdb.zip"
-output_folder = project_folder / "outputs" / "parcels"
+output_folder = project_folder / "data" / "processed" / "built_environment"
 
 output_folder.mkdir(parents=True, exist_ok=True)
 

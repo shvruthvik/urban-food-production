@@ -2,14 +2,14 @@
 from pathlib import Path
 import geopandas as gpd
 
-project_folder = Path.home() / "Downloads" / "Urban food Production"
+project_folder = Path(__file__).resolve().parents[2]
 
-tract_file = project_folder / "data" / "kc_metro_tracts_with_data.geojson"
+tract_file = project_folder / "data" / "processed" / "integrated" / "kc_metro_tracts_with_data.geojson"
 parcel_file = (
-    project_folder / "outputs" / "parcels"
+    project_folder / "data" / "processed" / "built_environment"
     / "kcmo_vacant_candidate_parcels.geojson"
 )
-output_folder = project_folder / "outputs" / "parcels"
+output_folder = project_folder / "data" / "processed" / "built_environment"
 output_folder.mkdir(parents=True, exist_ok=True)
 
 print("Reading project census tracts...")

@@ -1,9 +1,8 @@
 from pathlib import Path
 import pandas as pd
 
-data_folder = Path(
-    r"C:\Users\shvru\Downloads\Urban food Production\data"
-)
+project_folder = Path(__file__).resolve().parents[2]
+data_folder = project_folder / "data" / "processed" / "integrated"
 
 kc_file = data_folder / "kc_metro_tract_data.csv"
 

@@ -1,35 +1,89 @@
-# Urban Food Production Suitability Analysis — Instructor Guide
+# Urban Food Production Suitability Analysis
 
-## Project overview
-This project explores data preparation and candidate-variable screening for an urban food production suitability analysis in the Kansas City metropolitan area. The working study geography contains 516 census tracts across 14 counties.
+## Project Overview
 
-The repository contains Python scripts, selected processed datasets, quality-check tables, exploratory outputs, maps, presentation files, and project notes. It documents work completed to date; it is **not yet a complete end-to-end suitability model or finished ArcGIS Online dashboard**.
+This project explores data preparation and candidate-variable screening for an urban food production suitability analysis in the Kansas City metropolitan area. The working study geography contains **516 census tracts across 14 counties**.
 
-## Important scope and limitations
-- Health and socioeconomic data preparation/screening and several geography/food-access/parcel investigations have been performed.
-- The final AHP/MCDA suitability scoring, scenario comparisons, Priority Stability analysis, and ArcGIS Online dashboard should be treated as future work unless separately supplied.
-- The parcel candidate analysis currently covers Kansas City, Missouri source parcels only. Kansas parcel coverage is not complete, so the regional parcel picture is incomplete.
-- Food-access geography requires caution: the 2019 Atlas source uses older tract geography. A comparison using 2020 tract identifiers matched 430 of 516 study tracts (about 86%); unmatched/mismatched geography needs further harmonization before using it as a final suitability criterion.
-- Some processed files are intermediate diagnostic outputs. Their presence does not mean all variables have been selected or all analyses are final.
-- Raw data files are intentionally not included in this GitHub repository because of size and source-data management. See `datasets/README.md` for the data inventory and acquisition guidance.
+The repository contains Python analysis scripts, selected processed datasets, quality-check tables, exploratory outputs, and project documentation.
 
-## Repository structure
-- `scripts/01_project_setup/` — project setup, geography inspection, and source checks.
-- `scripts/02_health/` — health-variable screening, correlation checks, candidate comparisons, and sensitivity summaries.
-- `scripts/03_socioeconomic_acs/` — ACS variable selection, downloading/auditing/cleaning scripts, and integration/summary scripts.
-- `scripts/04_food_access_usda/` — food-access source inspection, geography checks, candidate comparisons, and related diagnostics.
-- `scripts/05_built_environment_parcels/` — parcel inventory, quality analysis, candidate filtering, tract assignment, and summaries.
-- `scripts/06_shared_geography/` — tract geography and crosswalk checks.
-- `scripts/07_out_of_scope/` — transit-related exploratory scripts, retained for reference and not part of the core project workflow.
-- `data/processed/` — selected derived datasets and intermediate outputs included in the repository.
-- `outputs/` — selected maps, reports, quality summaries, and screening results.
-- `presentation scripts/` — progress presentations.
-- `screenshots/` — selected screenshots.
+**Project status:** Health and socioeconomic data preparation, food-access investigation, and Missouri-side parcel analysis have produced intermediate datasets and diagnostic outputs. Final suitability scoring and the ArcGIS Online dashboard are not yet complete.
 
-## Environment setup
-Use Python 3.11 or a compatible Python 3 version. Some geospatial dependencies can be platform-sensitive, so use a virtual environment.
+## Current Progress
 
-From the repository root:
+- Health-variable quality checks, correlation analysis, and candidate-variable comparisons.
+- Socioeconomic data preparation using 2019 American Community Survey (ACS) 5-year estimates.
+- Food-access investigation using the USDA 2019 Food Access Research Atlas.
+- Census tract geography checks and cross-source integration.
+- Kansas City, Missouri parcel inventory, candidate filtering, and tract assignment.
+- Integration of health, socioeconomic, food-access, and parcel-count information into a tract-level dataset.
+
+## Important Limitations
+
+- **Parcel coverage:** Current candidate-parcel analysis covers Kansas City, Missouri. Kansas-side parcel coverage has not been fully integrated.
+- **Food-access geography:** The USDA 2019 Atlas uses older census-tract geography. Approximately 430 of the 516 study tracts matched the project’s tract identifiers. Geographic harmonization remains necessary.
+- **Candidate parcels:** Land-use codes are used to screen candidate parcels. They do not establish that a parcel is legally, physically, or operationally suitable for food production.
+- **Suitability model:** Final AHP/MCDA scoring, scenario comparisons, Score Change, Rank Change, Priority Stability analysis, and the ArcGIS Online dashboard remain future work.
+- **Data availability:** Raw data and large source files are not all included in the repository. Consult the dataset guide for acquisition instructions.
+
+## Repository Structure
+
+| Location | Contents |
+|---|---|
+| `scripts/01_project_setup/` | Project setup, geography inspection, and source checks |
+| `scripts/02_health/` | Health-variable screening and comparisons |
+| `scripts/03_socioeconomic_acs/` | ACS data preparation and integration |
+| `scripts/04_food_access_usda/` | Food-access integration and geography checks |
+| `scripts/05_built_environment_parcels/` | Parcel analysis and tract assignment |
+| `scripts/06_shared_geography/` | Shared geography and crosswalk checks |
+| `scripts/07_out_of_scope/` | Exploratory transit scripts outside the core workflow |
+| `data/processed/` | Derived datasets and intermediate results |
+| `outputs/` | Diagnostic reports, summaries, and selected outputs |
+| `datasets/` | Data inventory and acquisition documentation |
+| `screenshots/` | Selected screenshots |
+
+Individual scripts have their own input and output requirements. There is no single master script that runs the entire project end to end.
+
+## Key Outputs for Review
+
+### Health screening
+
+- `data/processed/health/health_variable_quality.csv`
+- `data/processed/health/health_variable_correlations_verified.csv`
+- `data/processed/health/health_candidate_comparison.csv`
+- `data/processed/health/health_sensitivity_summary.csv`
+
+### Socioeconomic data
+
+- `data/raw/socioeconomic/acs_2019_kc_metro_candidate_data.csv`
+- `data/raw/socioeconomic/acs_2019_audit_report.csv`
+- `data/raw/socioeconomic/acs_2019_kc_metro_cleaned.csv`
+- `data/processed/integrated/kc_metro_combined_health_socioeconomic.csv`
+- `data/processed/integrated/kc_metro_variable_summary.csv`
+
+### Food-access integration
+
+- `data/processed/integrated/kc_metro_combined_health_socioeconomic_LRAM2019.csv`
+
+### Parcel analysis
+
+- `data/processed/built_environment/kcmo_vacant_candidate_parcels.csv`
+- `data/processed/built_environment/kcmo_vacant_candidate_parcels.geojson`
+- `data/processed/built_environment/kcmo_candidates_in_study_area.geojson`
+- `outputs/parcels/parcel_quality_summary.csv`
+- `outputs/parcels/candidate_landuse_summary.csv`
+- `outputs/parcels/candidate_parcel_tract_assignments.csv`
+- `outputs/parcels/candidate_parcel_counts_by_tract.csv`
+- `outputs/parcels/unassigned_candidate_parcels.csv`
+
+### Current integrated tract-level output
+
+`data/processed/integrated/kc_metro_health_socioeconomic_parcel_counts.csv`
+
+This dataset brings together the current health, socioeconomic, food-access, and parcel-count information. It is an intermediate project output, not a final suitability model.
+
+## Environment Setup
+
+Use Python 3.11 or a compatible Python 3 version. From the repository root, run these commands in PowerShell:
 
 ```powershell
 py -m venv .venv
@@ -38,51 +92,22 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If PowerShell blocks activation, either allow script activation for the current user according to your institution's policy or invoke the environment's Python directly:
+If PowerShell blocks environment activation, use the virtual environment's Python executable directly:
+
 ```powershell
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-## Running the project
-**There is not currently a single master script that runs the entire project from raw data to final suitability scores.** Scripts are individual analysis steps and rely on specific source and intermediate files. Do not run all scripts blindly: some download data, prompt for credentials/API keys, or overwrite intermediate datasets.
+## Documentation and Review
 
-Recommended approach:
-1. Review the existing outputs first; they document analyses already performed.
-2. Obtain and place source datasets as described in `datasets/README.md`.
-3. Start with the relevant validation/inspection script for the category being reviewed.
-4. Run category-specific scripts in sequence only after confirming their input files exist and their paths match the local folder.
-5. Do not rerun scripts that download or regenerate key intermediate datasets unless you intend to replace those files and have backups.
+- **[Project review guide](README_INSTRUCTOR_GUIDE.md):** Selected scripts, input/output paths, review order, prerequisites, and reproducibility cautions.
+- **[Dataset inventory and acquisition guide](datasets/README.md):** Data sources, expected local folder structure, and acquisition guidance.
 
-### Existing output examples
-Processed files include:
-- `data/processed/health/health_variable_quality.csv`
-- `data/processed/health/health_variable_correlations.csv`
-- `data/processed/health/health_candidate_comparison.csv`
-- `data/processed/health/health_sensitivity_summary.csv`
-- `data/processed/health/kc_metro_health_all_variables.csv`
-- `data/processed/integrated/kc_metro_tract_data.csv`
-- `data/processed/integrated/kc_metro_combined_health_socioeconomic.csv`
-- `data/processed/integrated/kc_metro_variable_summary.csv`
-- `data/processed/socioeconomic/acs_variable_selection_summary.csv`
-- `data/processed/food_access/` — food-access inventories, merge/missingness checks, and candidate summaries
-- `data/processed/geography/` — tract crosswalk and geography audit outputs
-- `data/processed/built_environment/` — Missouri parcel candidates and tract-assignment outputs
-- `outputs/health/`, `outputs/socioeconomic/`, `outputs/food_access/`, `outputs/geography_validation/`, and `outputs/parcels/` — selected figures, reports, and diagnostic tables
+## Reproducibility and Data Safety
 
-These are **existing outputs**, not a guarantee that every script can be rerun without downloading or supplying its input datasets.
+Review a script's inputs, outputs, dependencies, and side effects before running it. Some scripts access external APIs, require source data that is not included in the repository, or overwrite existing files.
 
-## Suggested review order
-1. Read `Presentation Script.md` and the most recent progress presentation.
-2. Inspect `data/processed/integrated/kc_metro_variable_summary.csv`.
-3. Review health screening results in `data/processed/health/`.
-4. Review socioeconomic candidate selection in `data/processed/socioeconomic/` and `outputs/socioeconomic/`.
-5. Review food-access geography and missingness notes in `data/processed/food_access/` and `data/processed/geography/`.
-6. Review parcel coverage and candidate assignment results in `outputs/parcels/` and `data/processed/built_environment/`.
-7. Check the limitations above before interpreting any result as a final suitability ranking.
+Preserve important outputs before rerunning scripts, verify intermediate results before continuing, and avoid committing API keys, credentials, or restricted data.
 
-## API keys and online services
-Some ACS download scripts may use the Census API. A Census API key may be needed depending on the script and request limits. Do not commit API keys or credentials. No ArcGIS Online dashboard or credentials are included in this repository.
-
-## Reproducibility note
-The repository is a working research project with staged analysis scripts and intermediate results. Paths and input files should be checked before running a script. Preserve the supplied processed data and back up important outputs before rerunning any script that writes to the same location.
+The GitHub repository alone is not a complete raw-data package.
